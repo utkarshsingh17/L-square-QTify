@@ -3,15 +3,15 @@ import {Link} from "react-router-dom"
 import styles from "../Navbar/Navbar.module.css"
 import Logo from '../Logo/Logo'
 import Button from "../Button/Button";
-import Search from "../Search/Search";
+import SearchBar from "../SearchBar/SearchBar";
 const Navbar=()=>{
     return(
         <nav className={styles.navbar}>
             <Link to="/">
             <Logo />
             </Link>
-            <Search
-            placeholder="Search a song of your choice"
+            <SearchBar
+            
             />
             <Button>Give feedback</Button>
 
