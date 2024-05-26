@@ -1,7 +1,7 @@
 import styles from '../Search/Search.module.css';
 import searchIcon from '../../assets/search-icon.png'
 const Search=({placeholder})=>{
-    console.log(placeholder)
+    
     return (
         <div style={{position:'relative'}}>
             <form className={styles.wrapper}action="">
@@ -12,7 +12,7 @@ const Search=({placeholder})=>{
                     />
                 </div>
                 <div >
-                    <button className={styles.searchButton}><img src={searchIcon} alt="" /></button>
+                    <button className={styles.searchButton}><img  className={styles.searchIcon} src={searchIcon} alt="" /></button>
                 </div>
             </form>
         </div>

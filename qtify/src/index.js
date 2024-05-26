@@ -4,10 +4,20 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import HomePage from './pages/HomePage/HomePage';
+import AlbumPage from './pages/AlbumPage/AlbumPage'
 const router=createBrowserRouter([{
   path:'/',
-  element:<App/>
+  element:<App/>,
+  children:[{
+    path:"/",
+    element:<HomePage/>
+  },
+   {
+     path:"/album/:albumId",
+     element:<AlbumPage/>
+   }
+ ]
 }])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

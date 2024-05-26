@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "Poppins";
+}
+.toggleText{
+
+font-family: 'Poppins';
+cursor: pointer;
+color: var(--color-primary);
+
+
+
+}
+
+.wrapper{
+    display: flex;
+    gap:40px;
+    flex-wrap: wrap;
+    
+}
+.cardWrapper{
+    margin-top: 18px;
+}

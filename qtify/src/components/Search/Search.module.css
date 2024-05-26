@@ -27,4 +27,10 @@
 .searchIcon{
     background-color: var(--color-white);
     object-fit: contain;
+    width: 20px;
+    height: 20px;
+    top: 27px;
+    left: 961px;
+    gap: 0px;
+    opacity: 0px;
 }
