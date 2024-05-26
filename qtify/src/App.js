@@ -7,23 +7,27 @@ import { fetchTopAlbums,fetchNewAlbums,fetchSongs } from './api/api';
 import { useState,useEffect} from 'react';
 import {Outlet} from 'react-router-dom'
 function App() {
-  const [data,setData]=useState({});
-  const generateAlbums=(key,source)=>{
-    source().then((data)=>{
-      
-      setData((prevData)=>{
-        return {...prevData,[key]:data}
-      });
-    })
+  const [topAlbums, setTopSongsData] = useState([]);
+  const [newAlbums, setNewSongsData] = useState([]);
+  const [songs, setSongsData] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const topAlbums = await fetchTopAlbums();
+      setTopSongsData(topAlbums);
+
+      const newAlbums = await fetchNewAlbums();
+      setNewSongsData(newAlbums);
+
+      const songs = await fetchSongs();
+      setSongsData(songs);
+    })();
+  }, []);
     
 
-  }
-  useEffect(()=>{
-    generateAlbums("topAlbums",fetchTopAlbums);
-    generateAlbums("newAlbums",fetchNewAlbums);
-    generateAlbums("songs",fetchSongs);
-  },[]);
-  const {topAlbums=[],newAlbums=[],songs=[]}=data;
+  
+ 
+  
   return (
     <>
     <StyledEngineProvider injectFirst>
