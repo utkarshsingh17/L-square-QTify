@@ -7,3 +7,6 @@
     align-items: center;
     justify-content: space-between;
 }
+Button{
+    font-family: 'Poppins';
+}
