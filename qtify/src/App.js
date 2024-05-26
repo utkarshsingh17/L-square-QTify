@@ -22,7 +22,7 @@ function App() {
     generateAlbums("topAlbums",fetchTopAlbums);
     generateAlbums("newAlbums",fetchNewAlbums);
     generateAlbums("songs",fetchSongs);
-  });
+  },[]);
   const {topAlbums=[],newAlbums=[],songs=[]}=data;
   return (
     <>
