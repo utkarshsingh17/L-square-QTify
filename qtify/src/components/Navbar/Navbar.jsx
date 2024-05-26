@@ -13,7 +13,7 @@ const Navbar=()=>{
             <SearchBar
             
             />
-            <Button>Give feedback</Button>
+            <Button>Give Feedback</Button>
 
             
         </nav>
