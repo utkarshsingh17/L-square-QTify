@@ -5,7 +5,7 @@
  import { fetchFilters } from "../../api/api"
  import {useState} from 'react'
  import { useEffect } from "react"
- import Filters  from "../../components/Filters/Filters"
+ import Filters  from "../../components/Filters/Filters";
  const HomePage=()=>{
     const {data} =useOutletContext();
     const {topAlbums,newAlbums,songs}=data;
@@ -20,7 +20,7 @@
     let key;
     if (value === 0) {
 
-      setFilteredDataValues(songData)
+      setFilteredDataValues(songs)
       return;
     }
 
@@ -64,9 +64,15 @@
     
   }
   useEffect(() => {
-    // eslint-disable-next-line
-  }, [])
+    generateSongsData(value)
+}, [value, songs])
+  useEffect(() => {
+    
+    
+  
+    
 
+  }, [])
     return(
         <>
             <Hero/>
